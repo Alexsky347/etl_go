@@ -1,0 +1,23 @@
+{
+  "client": {
+    "client_id": {
+      "type": "string",
+      "maxLen": 100
+    },
+    "num1": {
+      "type": "string",
+      "maxLen": 12
+    },
+    "num2": {
+      "type": "string",
+      "maxLen": 12
+    },
+    "num3": {
+      "type": "string",
+      "maxLen": 12
+    },
+    "filiale_id": {
+      "type": "int"
+    }
+  }
+}

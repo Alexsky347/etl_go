@@ -1,0 +1,34 @@
+# create new app
+    - go mod init <your-module-name>
+
+# create new package (services)
+    - mkdir internal/services
+    - cd /internal/services
+    - go mod init services
+
+# build
+    - go build main.go
+    - /main
+#run
+    - go run main.go
+
+#package install
+    - add: go get package
+    - remove: go get package@none
+
+#debug
+    - 
+
+#package app
+    - 
+
+#kafka:
+    - go run producer.go
+    - go run consumer.go
+
+Check Kafka Topics: Use Kafka command-line tools to check if the topic exists and if messages are being produced:
+docker exec -it kafka kafka-topics --bootstrap-server localhost:9092 --list
+docker exec -it kafka kafka-console-consumer --bootstrap-server localhost:9092 --topic test-topic --from-beginning
+
+Check Offsets: If the consumer group has already consumed the messages, you might need to reset the offsets:
+docker exec -it kafka kafka-consumer-groups --bootstrap-server localhost:9092 --group product-service --reset-offsets --to-earliest --execute --topic test-topic

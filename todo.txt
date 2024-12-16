@@ -1,0 +1,5 @@
+get file
+transform
+load to db
+
+on each process add data to queue
