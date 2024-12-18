@@ -1,0 +1,17 @@
+# APP
+environment: production
+http_port: 8881
+auth_secret: ######
+log_level: debug
+# DB
+database_url: postgres://postgres:1234@127.0.0.1:5434/etl
+# MESSAGING
+messaging_server: localhost:9092
+messaging_topic: test-topic
+messaging_group_id: test-group
+# DATA
+csv_path: gen_data/data/small-data.csv
+config_path: pkg/conf/config.json
+separator: ;
+output_batch_mode: false
+
